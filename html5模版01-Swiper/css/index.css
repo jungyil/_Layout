@@ -1,0 +1,229 @@
+/*====Powered by ZhengYi===========2016.00.00===*/
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  max-height: 99999999px;
+}
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	font: normal 100% Helvetica, Arial, Microsoft Yahei, sans-serif;
+}
+img { width: 100%; border: none;}
+li { list-style: none;}
+form{
+    margin: 0;
+    display: inline;
+}
+#load-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-0.5em 0 0 -0.5em;
+    z-index: 99999;
+}
+@-webkit-keyframes spinner-loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spinner-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.spinner-loader:not(:required) {
+    -webkit-animation: spinner-loader 1500ms infinite linear;
+    animation: spinner-loader 1500ms infinite linear;
+    -webkit-box-shadow:rgba(110,190,170,.8) 1.5em 0 0 0, rgba(120,175,220,.8) 1.1em 1.1em 0 0, rgba(165,145,195,.8) 0 1.5em 0 0, rgba(215,130,165,.8) -1.1em 1.1em 0 0, rgba(245,120,95,.8) -1.5em 0 0 0, rgba(250,165,50,.8) -1.1em -1.1em 0 0, rgba(245,225,40,.8) 0 -1.5em 0 0, rgba(185,215,75,.8) 1.1em -1.1em 0 0;
+    box-shadow:rgba(110,190,170,.8) 1.5em 0 0 0, rgba(120,175,220,.8) 1.1em 1.1em 0 0, rgba(165,145,195,.8) 0 1.5em 0 0, rgba(215,130,165,.8) -1.1em 1.1em 0 0, rgba(245,120,95,.8) -1.5em 0 0 0, rgba(250,165,50,.8) -1.1em -1.1em 0 0, rgba(245,225,40,.8) 0 -1.5em 0 0, rgba(185,215,75,.8) 1.1em -1.1em 0 0;
+    display: inline-block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius:.5em;
+    overflow: hidden;
+    text-indent: 100%;
+}
+
+.preloaderLine{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:0;
+    margin-top: -1px;
+    border-bottom:3px solid #22B500;
+}
+
+.preloaderNum{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin:15px 0 0 -25px;
+    color:#333;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+#wrap{
+  position:relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+  opacity: 0;
+}
+.swiper-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#page1{
+    background: #ff7c40;
+}
+#page2{
+    background: #597aff;
+}
+#page3{
+    background: #ff92ac;
+}
+
+.animated-box > div{
+  position: absolute;
+  left: 50%;
+  /*display: none;*/
+  z-index: 10; 
+}
+.page1img1 {
+  top: 10%;
+  width: 80%;
+  margin-left: -40%;
+}
+.page1img2 {
+  top: 15%;
+  width: 80%;
+  margin-left: -40%;
+}
+.page1img3 {
+  top: 35%;
+  width: 50%;
+  margin-left: -25%;
+}
+.page1img4 {
+  bottom: 25%;
+  width: 30%;
+  margin-left: -15%;
+}
+.page1img5 {
+  bottom: 20%;
+  width: 50%;
+  margin-left: -25%;
+}
+.page1img6 {
+  bottom: 7%;
+  width: 80%;
+  margin-left: -40%;
+}
+.page2img1 {
+  top: 5%;
+  width: 80%;
+  margin-left: -40%;
+}
+.page2img2 {
+  top: 25%;
+  width: 80%;
+  margin-left: -40%;
+}
+.page2img3 {
+  top: 30%;
+  width: 60%;
+  margin-left: -30%;
+}
+.page2img4 {
+  bottom: 5%;
+  width: 60%;
+  margin-left: -30%;
+}
+
+.page3img1 {
+  top: 10%;
+  width: 80%;
+  margin-left: -40%;
+}
+.animated-box > div.page3img2 {
+  top: 30%;
+  width: 60%;
+  margin-left: -30%;
+  z-index: 20
+}
+.page3img3 {
+  top: 34%;
+  width: 80%;
+  margin-left: -40%;
+}
+.page3img4 {
+  bottom: 8%;
+  width: 60%;
+  margin-left: -30%;
+}
+.pop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.9);
+  display: none;
+  z-index: 999
+}
+.share{
+    text-align: center;
+}
+.share img{
+    width: 80%;
+    margin-top: 10%;
+}
+.close{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    background: url("../img/close.png") no-repeat;
+    background-size: cover;
+    opacity: .9;
+}
+.arrow{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: block;
+    width: 57px;
+    height: 33px;
+    margin-left: -28px;
+    background: url("../img/arrow.png") no-repeat;
+    background-size: cover;
+    z-index: 888;
+
+    -webkit-animation: fadeInDown 1s infinite;
+    animation: fadeInDown 1s infinite;
+}
+.sound{ position:absolute; top:10px; right:10px;display:block; width:25px; height:25px; background:url(../img/sound_btn.png) no-repeat; background-size:cover; background-position:0 0; opacity:.8; z-index:9999}
+.sound.i{background-position:0 -25px;}
